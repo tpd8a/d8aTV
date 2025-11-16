@@ -1,0 +1,48 @@
+# Swift Package Manager
+.build/
+.swiftpm/
+*.xcodeproj
+*.xcworkspace
+
+# macOS
+.DS_Store
+*.swp
+*~.nib
+*.perspectivev3
+
+# Xcode
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+*.moved-aside
+*.hmap
+*.ipa
+xcuserdata/
+timeline.xctimeline
+playground.xcworkspace
+
+# CoreData
+*.db
+*.db-shm
+*.db-wal
+
+# SPM Temporary Files
+.swiftpm/
+Package.resolved
+
+# Build artifacts
+.build/
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Test artifacts
+*.xcresult
