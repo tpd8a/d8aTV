@@ -12,6 +12,10 @@ let package = Package(
             name: "DashboardKit",
             targets: ["DashboardKit"]
         ),
+        .library(
+            name: "d8aTvCore",
+            targets: ["d8aTvCore"]
+        ),
     ],
     targets: [
         .target(
@@ -20,6 +24,10 @@ let package = Package(
             resources: [
                 .process("CoreData/DashboardModel.xcdatamodeld")
             ]
+        ),
+        .target(
+            name: "d8aTvCore",
+            dependencies: []
         ),
         .testTarget(
             name: "DashboardKitTests",
