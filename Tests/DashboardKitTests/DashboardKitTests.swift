@@ -1,7 +1,7 @@
 import XCTest
-@testable import DashboardStudio
+@testable import DashboardKit
 
-final class DashboardStudioTests: XCTestCase {
+final class DashboardKitTests: XCTestCase {
 
     func testDashboardStudioParsing() async throws {
         let jsonString = """

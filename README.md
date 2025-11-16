@@ -1,10 +1,10 @@
-# DashboardStudio
+# DashboardKit
 
-A ground-up Swift implementation for integrating with Splunk's Dashboard Studio format, with full support for legacy SimpleXML dashboards and comprehensive CoreData persistence.
+A ground-up Swift framework for managing dashboards from multiple sources and formats. Supports Splunk Dashboard Studio, legacy SimpleXML, and extensible architecture for Elastic and Prometheus dashboards with comprehensive CoreData persistence.
 
 ## Overview
 
-DashboardStudio is a Swift 6 framework designed for macOS v26 and tvOS v26 that provides:
+DashboardKit is a Swift 6 framework designed for macOS v26 and tvOS v26 that provides:
 
 - **Dashboard Studio Support**: Parse, validate, and manage Splunk 10+ Dashboard Studio JSON format
 - **Legacy SimpleXML Support**: Full backward compatibility with SimpleXML dashboards
@@ -75,10 +75,10 @@ Easily extensible for Elastic and Prometheus.
 ### Parsing a Dashboard Studio Dashboard
 
 ```swift
-import DashboardStudio
+import DashboardKit
 
 // Initialize framework
-await DashboardStudio.initialize()
+await DashboardKit.initialize()
 
 // Parse Dashboard Studio JSON
 let parser = await DashboardStudioParser()
@@ -95,7 +95,7 @@ let dashboardId = try await manager.saveDashboard(config)
 ### Parsing a SimpleXML Dashboard
 
 ```swift
-import DashboardStudio
+import DashboardKit
 
 // Parse SimpleXML
 let parser = await SimpleXMLParser()
@@ -113,7 +113,7 @@ let dashboardId = try await manager.saveDashboard(studioConfig)
 ### Executing Searches with Tracking
 
 ```swift
-import DashboardStudio
+import DashboardKit
 
 // Create and register a Splunk data source
 let splunk = await SplunkDataSource(
@@ -171,7 +171,7 @@ if status == .completed {
 ### Accessing Historical Data
 
 ```swift
-import DashboardStudio
+import DashboardKit
 
 let manager = await CoreDataManager.shared
 

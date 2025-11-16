@@ -2,28 +2,28 @@
 import PackageDescription
 
 let package = Package(
-    name: "DashboardStudio",
+    name: "DashboardKit",
     platforms: [
         .macOS(.v14),
         .tvOS(.v17)
     ],
     products: [
         .library(
-            name: "DashboardStudio",
-            targets: ["DashboardStudio"]
+            name: "DashboardKit",
+            targets: ["DashboardKit"]
         ),
     ],
     targets: [
         .target(
-            name: "DashboardStudio",
+            name: "DashboardKit",
             dependencies: [],
             resources: [
                 .process("CoreData/DashboardModel.xcdatamodeld")
             ]
         ),
         .testTarget(
-            name: "DashboardStudioTests",
-            dependencies: ["DashboardStudio"]
+            name: "DashboardKitTests",
+            dependencies: ["DashboardKit"]
         ),
     ]
 )

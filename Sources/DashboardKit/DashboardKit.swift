@@ -1,9 +1,10 @@
 import Foundation
 
-/// Main entry point for DashboardStudio framework
+/// Main entry point for DashboardKit framework
 ///
-/// This framework provides comprehensive support for Splunk Dashboard Studio format,
-/// including parsing, storage, and execution tracking.
+/// This framework provides comprehensive support for dashboard management across
+/// multiple formats and data sources, including Splunk Dashboard Studio, SimpleXML,
+/// and extensible support for Elastic and Prometheus.
 ///
 /// ## Features
 ///
@@ -42,7 +43,7 @@ import Foundation
 /// )
 /// ```
 ///
-public struct DashboardStudio {
+public struct DashboardKit {
     public static let version = "1.0.0"
 
     /// Initialize the framework
